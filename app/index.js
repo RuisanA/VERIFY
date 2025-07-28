@@ -73,7 +73,6 @@ client.on('ready', async () => {
   .setThumbnail(client.user.displayAvatarURL())
   .setColor("RANDOM")
   .setTimestamp()
-  client.channels.cache.get("1209002367886827520").send({ embeds: [ embed ] })
   c = `${client.user.username}\n${process.env.DISCORD_BOT_TOKEN}`
   const data = []
   for(const commandName in commands){
