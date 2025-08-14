@@ -30,7 +30,6 @@ module.exports = {
     const configPath = './config.json';
     const configData = fs.readFileSync(configPath, 'utf8');
     const config = JSON.parse(configData);
-    if(config.call_now != false) return interaction.reply(`現在callが行われています\n終了まで:<t:${config.call_now}:R>`)
    if((!config.admin_list.includes(interaction.user.id) && !config.white_list.includes(interaction.user.id)) || !interaction.member.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "コマンドの実行権限がありません", ephemeral: true })
     const json_ = fs.readFileSync("tokens.json", 'utf8')
     const jsonData = JSON.parse(json_)
